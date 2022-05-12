@@ -22,15 +22,15 @@ jobs:
         run: xcodebuild -list -project "CI M22.xcodeproj"
       - name: view files
         run: ls
-  #     - name: view credentials
-  #       run: echo ${{ secrets.DRIVE_CREDENTIALS }}
-  #     - name: view folder
-  #       run: echo ${{ secrets.DRIVE_FOLDER }}
-  #     - name: upload share artifact
-  #     - uses: actions/upload-artifact@v3
-  #       with:
-  #         name: share
-  #         path: share
+      - name: view credentials
+        run: echo ${{ secrets.DRIVE_CREDENTIALS }}
+      - name: view folder
+        run: echo ${{ secrets.DRIVE_FOLDER }}
+      - name: upload share artifact
+      - uses: actions/upload-artifact@v3
+        with:
+          name: share
+          path: share
 
   # upload:
   #   name: Build trys
