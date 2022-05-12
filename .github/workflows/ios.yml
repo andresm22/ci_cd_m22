@@ -26,11 +26,11 @@ jobs:
         run: echo ${{ secrets.DRIVE_CREDENTIALS }}
       - name: view folder
         run: echo ${{ secrets.DRIVE_FOLDER }}
-      - name: upload share artifact
-      - uses: actions/upload-artifact@v3
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v3.0.0
         with:
           name: share
-          path: share
+          path: README.md
 
   # upload:
   #   name: Build trys
