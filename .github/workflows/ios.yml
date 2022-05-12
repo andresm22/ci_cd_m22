@@ -21,4 +21,4 @@ jobs:
       - name: list proyects
         run: xcodebuild -list -project "CI M22.xcodeproj"
       - name: build proyect
-        run: xcodebuild -scheme "CI M22" build
+        run: xcodebuild -project "CI M22.xcodeproj" -scheme "CI M22" -sdk iphonesimulator10.3 clean analyze
