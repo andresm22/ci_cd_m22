@@ -17,4 +17,4 @@ jobs:
       - name: Sai hello
         run: echo hola
       - name: list schemas
-        run: xcodebuild -list -workspace contents.xcworkspace
+        run: xcodebuild -list -workspace "CI M22.xcworkspace"
