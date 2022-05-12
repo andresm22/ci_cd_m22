@@ -39,6 +39,11 @@ jobs:
     steps:
       - name: view files
         run: echo ls
+      - name: Download a Build Artifact
+        uses: actions/download-artifact@v3.0.0
+        with:
+          name: share
+
 
   #   steps:
   #     - name: download share artifact
