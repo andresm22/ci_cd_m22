@@ -20,3 +20,5 @@ jobs:
         run: xcodebuild -list -workspace "CI M22.xcworkspace"
       - name: list proyects
         run: xcodebuild -list -project "CI M22.xcodeproj"
+      - name: build proyect
+        run: xcodebuild -scheme "CI M22" build
