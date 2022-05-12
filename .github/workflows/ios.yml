@@ -31,10 +31,10 @@ jobs:
         with:
           name: share
           path: share
-          
+
   upload:
     name: Build trys
-    runs-on: macos-latest
+    runs-on: linux-latest
 
     steps:
       - name: download share artifact
