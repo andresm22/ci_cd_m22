@@ -32,10 +32,18 @@ jobs:
           name: share
           path: README.md
 
-  # upload:
-  #   name: Build trys
-  #   runs-on: linux-latest
-  #   needs: [build]
+  upload:
+    name: Build trys
+    runs-on: linux-latest
+    needs: [build]
+
+    steps:
+      - name: Artifact Download
+          uses: actions/download-artifact@v3.0.0
+          with:
+            name: share
+      - name: view files
+          run: ls    
 
   #   steps:
   #     - name: download share artifact
