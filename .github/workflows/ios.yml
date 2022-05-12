@@ -35,6 +35,7 @@ jobs:
   upload:
     name: Build trys
     runs-on: linux-latest
+    needs: [build]
 
     steps:
       - name: download share artifact
