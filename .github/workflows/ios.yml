@@ -32,15 +32,6 @@ jobs:
           name: share
           path: README.md
 
-  upload:
-    name: Build trys
-    runs-on: linux-latest
-    needs: [build]
-
-    steps:
-      - name: view files
-          run: echo ls    
-
   #   steps:
   #     - name: download share artifact
   #     - uses: actions/download-artifact@v3
