@@ -26,11 +26,28 @@ jobs:
         run: echo ${{ secrets.DRIVE_CREDENTIALS }}
       - name: view folder
         run: echo ${{ secrets.DRIVE_FOLDER }}
+      - name: upload share artifact
+      - uses: actions/upload-artifact@v3
+        with:
+          name: share
+          path: share
+          
+  upload:
+    name: Build trys
+    runs-on: macos-latest
+
+    steps:
+      - name: download share artifact
+      - uses: actions/download-artifact@v3
+            with:
+              name: share
+              path: share
+      - name: view files
+        run: ls
       - name: Upload to gdrive
         uses: adityak74/google-drive-upload-git-action@main
         with:
           credentials: ${{ secrets.DRIVE_CREDENTIALS }}
-          filename: "archive.zip"
+          filename: "README.md"
           folderId: ${{ secrets.DRIVE_FOLDER }}
-          name: "README.md" # optional string
           overwrite: "true" # optional boolean
