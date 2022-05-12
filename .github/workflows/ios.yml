@@ -14,6 +14,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Set Default Scheme
-        run: |
-          echo hola
+      - name: Sai hello
+        run: echo hola
+      - name: list schemas
+        run: xcodebuild -list -workspace contents.xcworkspace
