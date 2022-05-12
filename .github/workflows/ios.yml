@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    name: Build and Test default scheme using any available iPhone simulator
+    name: Build trys
     runs-on: macos-latest
 
     steps:
@@ -18,3 +18,5 @@ jobs:
         run: echo hola
       - name: list schemas
         run: xcodebuild -list -workspace "CI M22.xcworkspace"
+      - name: list proyects
+        run: xcodebuild -list -project "CI M22.xcodeproj"
